@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Tiffany Lam | Sewing Blog`,
+    title: `Sewing Adventures | Tiffany Lam`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

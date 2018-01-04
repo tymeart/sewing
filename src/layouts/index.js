@@ -54,7 +54,7 @@ const Sidebar = (props) => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Tiffany Lam | Sewing Blog"
+      title="Sewing Adventures | Tiffany Lam"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
