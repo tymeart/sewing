@@ -1,0 +1,2 @@
+webpackJsonp([0xde2d789f0de6],{304:function(e,t){e.exports={data:{markdownRemark:{html:"<p>I thought I'd write about my experience sewing Wear Lemonade's Luisa dress since the pattern is a bit difficult to find, and the only instructions came in the form of a video spoken entirely in French.</p>",frontmatter:{date:"January 04, 2018",path:"/luisa",title:"Sewing Wear Lemonade's Luisa"}}},pathContext:{}}}});
+//# sourceMappingURL=path---luisa-3ae6213b438e5662401e.js.map
