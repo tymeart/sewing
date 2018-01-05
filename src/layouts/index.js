@@ -11,7 +11,7 @@ const Header = () => (
   <div
     style={{
       background: '#f5f5f5',
-      marginBottom: '3rem',
+      marginBottom: '1rem',
       borderBottom: '2px solid #e6e6e6',
     }}
   >
@@ -22,11 +22,10 @@ const Header = () => (
         padding: '1.45rem 1.0875rem',
       }}
    >
-     <h1 style={{margin: 0, textAlign: 'center',fontSize: '18px'}}>
+     <h1 style={{margin: 0, textAlign: 'center'}}>
         <Link to="/"
           style={{
-            color: 'black',
-            textDecoration: 'none',
+            color: 'black'
           }}
         >
           Sewing Adventures
@@ -45,9 +44,8 @@ const Sidebar = (props) => (
       marginBottom: '25px'
     }}
     >
-      <strong>{props.title}</strong>
-      <br />
-      {props.description}
+      <h2 className="sidebar-title">{props.title}</h2>
+      <p>{props.description}</p>
     </div>
 );
 
@@ -79,13 +77,19 @@ const TemplateWrapper = ({ children }) => (
                 margin: '0 auto',
                 maxWidth: 980,
                 display: 'flex',
-                flexDirection: 'row',
+                flexDirection: 'column',
                 justifyContent: 'space-between',
                 height: '100%',
                 padding: '25px'
                 }}
               >
-                <div style={{ flex: '1'}}>{children()}</div>
+                <div style={{ flex: 1 }}>
+                  <Sidebar
+                    title="About Me"
+                    description="I'm Tiffany, and I'm learning to sew."
+                  />
+                </div>
+                <div style={{ flex: 1 }}>{children()}</div>
             </div>
           ) : (
             <div

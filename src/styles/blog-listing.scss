@@ -5,10 +5,10 @@ div.blog-post-preview {
     margin-bottom: 1rem;
 }
 h1 > * {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration-line: none;
 }
-h2 {
-    font-size: 0.8rem !important;
-    font-weight: 100 !important;
+.blog-post-preview h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
 }
