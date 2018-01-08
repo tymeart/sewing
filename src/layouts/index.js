@@ -12,20 +12,22 @@ const Header = () => (
     style={{
       background: '#f5f5f5',
       marginBottom: '1rem',
-      borderBottom: '2px solid #e6e6e6',
+      borderBottom: '2px dash #e6e6e6',
     }}
   >
     <div
       style={{
         margin: '0 auto',
         maxWidth: 980,
-        padding: '1.45rem 1.0875rem',
+        padding: '2rem 1.0875rem',
       }}
    >
      <h1 style={{margin: 0, textAlign: 'center'}}>
         <Link to="/"
           style={{
-            color: 'black'
+            color: 'black',
+            fontSize: '1.5em',
+            letterSpacing: '2px'
           }}
         >
           Sewing Adventures
