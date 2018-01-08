@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import '../styles/blog-listing.scss'
+import '../styles/post.scss'
 
 export default function Index({data}) {
   const {edges: posts} = data.allMarkdownRemark;

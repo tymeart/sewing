@@ -1,0 +1,25 @@
+$green: #229B5F;
+$palegreen: #759F75;
+
+div.blog-post-preview {
+    border-bottom: 2px solid #e6e6e6;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+h1 > * {
+    color: $green;
+    font-size: 1.5rem;
+    text-decoration-line: none;
+}
+
+.blog-post-preview,
+.blog-post {
+  h2 {
+      color: $palegreen;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-bottom: 1.5em;
+    }
+}
