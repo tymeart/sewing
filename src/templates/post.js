@@ -3,9 +3,28 @@ import Helmet from 'react-helmet';
 
 import '../styles/post.scss';
 
+const LinkList = ({ list }) => {
+  const listItems = list.map(item => <Links key={item} item={item}/>);
+
+  return (
+    <ul>
+      {listItems}
+    </ul>
+  );
+};
+
+const Links = (props) => (
+  <li>
+    <a>
+      {props.item}
+    </a>
+  </li>
+)
+
 export default function Template({data}) {
-  const { markdownRemark: post } = data;
-  // const post = data.markdownRemark;
+  const post = data.markdownRemark;
+  const tags = post.frontmatter.tags;
+
   return (
     <div className="blog-post-container">
       <Helmet title={`${post.frontmatter.title} | Tiffany Lam`} />
@@ -16,9 +35,9 @@ export default function Template({data}) {
           className="blog-post-content"
           dangerouslySetInnerHTML={{__html: post.html}}
         />
-        <p className="blog-post-tags">
-          {post.frontmatter.tags && post.frontmatter.tags.join(', ')}
-        </p>
+        <div className="blog-post-tags">
+          tags: {tags && <LinkList list={tags} />}
+        </div>
       </div>
     </div>
   );

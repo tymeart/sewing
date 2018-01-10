@@ -1,6 +1,10 @@
 $green: #229B5F;
 $palegreen: #759F75;
 
+a:hover {
+  cursor: pointer;
+}
+
 div.blog-post-preview {
     border-bottom: 2px solid #e6e6e6;
     padding-top: 1rem;
@@ -25,5 +29,18 @@ h1 > * {
 }
 
 .blog-post-tags {
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+
+    li {
+      background-color: lighten($palegreen, 30%);
+      padding: 0 5px;
+      margin: 0 3px;
+    }
+  }
 }
