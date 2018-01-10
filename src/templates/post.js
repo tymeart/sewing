@@ -16,6 +16,9 @@ export default function Template({data}) {
           className="blog-post-content"
           dangerouslySetInnerHTML={{__html: post.html}}
         />
+        <p className="blog-post-tags">
+          {post.frontmatter.tags && post.frontmatter.tags.join(', ')}
+        </p>
       </div>
     </div>
   );
@@ -29,6 +32,7 @@ export const postQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
       }
     }
   }
