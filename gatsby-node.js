@@ -8,8 +8,49 @@
 
  const path = require('path');
 
+ const createTagPages = (createPage, edges) => {
+   const tagTemplate = path.resolve(`src/templates/tags.js`);
+   const posts = {};
+   console.log("creating posts")
+
+   // go through each markdown post and add the tags to the posts object
+   edges.forEach(({node}) => {
+     if (node.frontmatter.tags) {
+       node.frontmatter.tags.forEach(tag => {
+         if (!posts[tag]) {
+           posts[tag] = [];
+         }
+         posts[tag].push(node);
+       });
+     }
+   });
+
+   // create page with list of tags
+   createPage({
+     path: '/tags',
+     component: tagTemplate,
+     context: {
+       posts
+     }
+   });
+
+   // create a page for each tag in the post object
+   Object.keys(posts).forEach(tagName => {
+     const post = posts[tagName];
+     createPage({
+       path: `/tags/${tagName}`,
+       component: tagTemplate,
+       context: {
+         posts,
+         post,
+         tag: tagName
+       }
+     });
+   });
+ }
+
  exports.createPages = ({boundActionCreators, graphql}) => {
-   const {createPage} = boundActionCreators;
+   const { createPage } = boundActionCreators;
 
    const postTemplate = path.resolve('src/templates/post.js');
 
@@ -27,6 +68,7 @@
              date
              path
              title
+             tags
            }
          }
        }
@@ -36,11 +78,15 @@
      if (res.errors) {
        return Promise.reject(res.errors);
      }
-     res.data.allMarkdownRemark.edges.forEach(({node}) => {
+     const posts = res.data.allMarkdownRemark.edges;
+     createTagPages(createPage, posts);
+
+     // create pages from markdown posts
+     posts.forEach(({node}) => {
        createPage({
          path: node.frontmatter.path,
          component: postTemplate
-       })
+       });
      });
    });
  }
