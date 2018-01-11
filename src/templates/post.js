@@ -1,25 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Tags from '../components/tags';
 
 import '../styles/post.scss';
-
-const LinkList = ({ list }) => {
-  const listItems = list.map(item => <Links key={item} item={item}/>);
-
-  return (
-    <ul>
-      {listItems}
-    </ul>
-  );
-};
-
-const Links = (props) => (
-  <li>
-    <a>
-      {props.item}
-    </a>
-  </li>
-)
 
 export default function Template({data}) {
   const post = data.markdownRemark;
@@ -36,7 +19,7 @@ export default function Template({data}) {
           dangerouslySetInnerHTML={{__html: post.html}}
         />
         <div className="blog-post-tags">
-          tags: {tags && <LinkList list={tags} />}
+          tags: <Tags list={tags} />
         </div>
       </div>
     </div>
