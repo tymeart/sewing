@@ -1,0 +1,2 @@
+webpackJsonp([0xf0978e2b5559],{310:function(t,e){t.exports={data:{markdownRemark:{html:"<p>I finally decided to write about my sewing projects!</p>",frontmatter:{date:"December 14, 2017",path:"/intro",title:"Welcome to My Sewing Blog",tags:[]}}},pathContext:{}}}});
+//# sourceMappingURL=path---intro-84698d573368f9b8d254.js.map
