@@ -52,8 +52,21 @@ const Sidebar = (props) => (
     </div>
 );
 
-const TemplateWrapper = ({ children }) => {
-  console.log(children)
+const TemplateWrapper = ({ children, data }) => {
+  console.log(data)
+  const posts = data.allMarkdownRemark.edges;
+  const tags = [];
+  posts.forEach(({node}) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        if (tags.indexOf(tag) !== -1) {
+          tags.push(tag);
+        }
+      });
+    }
+  });
+  console.log(tags);
+
   return (
   <div>
     <Helmet
@@ -117,7 +130,7 @@ const TemplateWrapper = ({ children }) => {
                   description="I'm Tiffany, and I'm learning to sew."
                 />
                 <div>
-                  <Tags />
+                  <Tags list={tags}/>
                 </div>
               </div>
             </div>
@@ -132,5 +145,19 @@ const TemplateWrapper = ({ children }) => {
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
 }
+
+export const query = graphql`
+  query TagsQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            tags
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default TemplateWrapper
