@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Media from 'react-media'
+import Tags from '../components/tags'
 
 import './index.scss'
 import '../styles/layout-overide.scss'
@@ -115,6 +116,9 @@ const TemplateWrapper = ({ children }) => {
                   title="About Me"
                   description="I'm Tiffany, and I'm learning to sew."
                 />
+                <div>
+                  <Tags />
+                </div>
               </div>
             </div>
           )
