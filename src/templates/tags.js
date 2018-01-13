@@ -21,7 +21,7 @@ export default function Tags({pathContext}) {
             );
           })}
         </ul>
-        <GatsbyLink to="/tags">All tags</GatsbyLink>
+        <GatsbyLink to="/tags">Browse all tags</GatsbyLink>
       </div>
     );
   }
