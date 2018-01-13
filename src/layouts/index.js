@@ -51,7 +51,9 @@ const Sidebar = (props) => (
     </div>
 );
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children }) => {
+  console.log(children)
+  return (
   <div>
     <Helmet
       title="Sewing Adventures | Tiffany Lam"
@@ -120,7 +122,8 @@ const TemplateWrapper = ({ children }) => (
       </Media>
     </div>
   </div>
-);
+  );
+};
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,

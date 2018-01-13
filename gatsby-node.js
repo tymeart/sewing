@@ -11,7 +11,6 @@
  const createTagPages = (createPage, edges) => {
    const tagTemplate = path.resolve(`src/templates/tags.js`);
    const posts = {};
-   console.log("creating posts")
 
    // go through each markdown post and add the tags to the posts object
    edges.forEach(({node}) => {
