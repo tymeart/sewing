@@ -53,19 +53,17 @@ const Sidebar = (props) => (
 );
 
 const TemplateWrapper = ({ children, data }) => {
-  console.log(data)
   const posts = data.allMarkdownRemark.edges;
   const tags = [];
   posts.forEach(({node}) => {
     if (node.frontmatter.tags) {
       node.frontmatter.tags.forEach(tag => {
-        if (tags.indexOf(tag) !== -1) {
+        if (tags.indexOf(tag) === -1) {
           tags.push(tag);
         }
       });
     }
   });
-  console.log(tags);
 
   return (
   <div>
