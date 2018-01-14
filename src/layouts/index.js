@@ -106,6 +106,10 @@ const TemplateWrapper = ({ children, data }) => {
                   />
                 </div>
                 <div style={{ flex: 1 }}>{children()}</div>
+                <Sidebar
+                  title="Tags"
+                  description={<Tags list={tags}/>}
+                />
             </div>
           ) : (
             <div
@@ -127,9 +131,10 @@ const TemplateWrapper = ({ children, data }) => {
                   title="About Me"
                   description="I'm Tiffany, and I'm learning to sew."
                 />
-                <div>
-                  <Tags list={tags}/>
-                </div>
+                <Sidebar
+                  title="Tags"
+                  description={<Tags list={tags}/>}
+                />
               </div>
             </div>
           )
