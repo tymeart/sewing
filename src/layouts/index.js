@@ -48,7 +48,7 @@ const Sidebar = (props) => (
     }}
     >
       <h2 className="sidebar-title">{props.title}</h2>
-      <p>{props.description}</p>
+      {props.description}
     </div>
 );
 
