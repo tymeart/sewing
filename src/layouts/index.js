@@ -108,7 +108,7 @@ const TemplateWrapper = ({ children, data }) => {
                 <div style={{ flex: 1 }}>{children()}</div>
                 <Sidebar
                   title="Tags"
-                  description={<Tags list={tags}/>}
+                  description={<Tags list={tags} className="sidebar-tags" />}
                 />
             </div>
           ) : (
@@ -133,7 +133,7 @@ const TemplateWrapper = ({ children, data }) => {
                 />
                 <Sidebar
                   title="Tags"
-                  description={<Tags list={tags}/>}
+                  description={<Tags list={tags} className="sidebar-tags" />}
                 />
               </div>
             </div>
