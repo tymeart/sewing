@@ -11,30 +11,27 @@ import '../styles/layout-overide.scss'
 const Header = () => (
   <div
     style={{
-      background: '#f5f5f5',
+      background: '#759F75',
       marginBottom: '1rem',
-      borderBottom: '2px dash #e6e6e6',
     }}
   >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 980,
-        padding: '2rem 1.0875rem',
-      }}
-   >
-     <h1 style={{margin: 0, textAlign: 'center'}}>
-        <Link to="/"
-          style={{
-            color: 'black',
-            fontSize: '1.5em',
-            letterSpacing: '2px'
-          }}
-        >
-          Sewing Adventures
-        </Link>
-      </h1>
-    </div>
+   <h1 style={{
+     margin: '0 auto',
+     textAlign: 'center',
+     background: '#759F75',
+     maxWidth: 980,
+     padding: '4rem 1.0875rem',
+   }}>
+      <Link to="/"
+        style={{
+          color: 'white',
+          fontSize: '1.5em',
+          letterSpacing: '2px'
+        }}
+      >
+        Sewing Adventures
+      </Link>
+    </h1>
   </div>
 );
 
