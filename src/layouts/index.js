@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Media from 'react-media'
 import Tags from '../components/tags'
+import profilePic from './me.png'
 
 import './index.scss'
 import '../styles/layout-overide.scss'
@@ -40,7 +41,7 @@ const Sidebar = (props) => (
     style={{
       border: '2px solid #e6e6e6',
       maxWidth: 960,
-      padding: '0.5rem',
+      padding: '1rem',
       marginBottom: '25px'
     }}
     >
@@ -99,7 +100,12 @@ const TemplateWrapper = ({ children, data }) => {
                 <div style={{ flex: 1 }}>
                   <Sidebar
                     title="About Me"
-                    description="I'm Tiffany, and I'm learning to sew."
+                    description={
+                      <div style={{ display: 'flex' }}>
+                        <img src={profilePic} alt="Picture of me" className="profilepic-small"/>
+                        <p>I'm Tiffany, and I'm learning to sew.</p>
+                      </div>
+                    }
                   />
                 </div>
                 <div style={{ flex: 1 }}>{children()}</div>
@@ -126,7 +132,12 @@ const TemplateWrapper = ({ children, data }) => {
               <div style={{ flex: 1 }}>
                 <Sidebar
                   title="About Me"
-                  description="I'm Tiffany, and I'm learning to sew."
+                  description={
+                    <div>
+                      <img src={profilePic} alt="Picture of me" className="profilepic-large"/>
+                      <p>I'm Tiffany, and I'm learning to sew.</p>
+                    </div>
+                  }
                 />
                 <Sidebar
                   title="Tags"

@@ -39,3 +39,19 @@ a:hover {
 .sidebar-tags li a {
   text-decoration: none;
 }
+
+.profilepic-small {
+  border-radius: 100%;
+  height: 75px;
+  margin-bottom: 0;
+  margin-right: 20px;
+  width: 75px;
+}
+
+.profilepic-large {
+  border-radius: 100%;
+  display: block;
+  height: 100px;
+  margin: 20px auto;
+  width: 100px;
+}
