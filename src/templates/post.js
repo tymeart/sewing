@@ -19,7 +19,7 @@ export default function Template({data}) {
           dangerouslySetInnerHTML={{__html: post.html}}
         />
         <div className="blog-post-tags">
-          tags: <Tags list={tags} />
+          {tags.length !== 0 && 'tags:'} <Tags list={tags} />
         </div>
       </div>
     </div>
