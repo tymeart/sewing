@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{98:function(t,e){t.exports={data:{allMarkdownRemark:{edges:[{node:{frontmatter:{tags:[]}}},{node:{frontmatter:{tags:["dresses","knits"]}}}]}},layoutContext:{}}}});
+//# sourceMappingURL=path----64f53ffc9a0475effd4c.js.map
